@@ -1,0 +1,110 @@
+// @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+* {
+    box-sizing: border-box;
+}
+  
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #363635;
+}
+  
+html,
+body {
+    width: 100%;
+}
+
+.back-sales{
+    display: inline-block;
+    margin: 20px 0px 0px 90px;
+    color:orange;
+}
+.sale__body{
+    max-width: 1300px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.sale__title{
+    text-align: center;
+    margin: 30px 0px 50px ;
+}
+.title{
+    font-size:calc(20px + 16 * (100vw / 1200));
+    position: relative;
+    padding: 0px 0px 30px 0px;
+}
+h5{
+    font-size:calc( 10px + 10 * (100vw / 1200));
+}
+p{
+    font-size: calc( 11px + 4 * ( 100vw / 1200));
+}
+
+.title:after{
+    content:'';
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    left: 42%;
+    bottom: 0;
+    background-color: orange;
+    margin: 0px 0px 0px -25px;
+}
+
+.sale__row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sale__column{
+    flex: 0 0 47%;
+}
+
+.item-about__image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.item-about__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 9px 0px 9px 0px rgba(128, 126, 131, 0.76);
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    .sale__body{
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .sale__body{
+        margin: 0 auto;
+    }
+    .sale__title{
+        margin: 10px 0px 30px 0px;
+    }
+    title{
+        font-size: calc(20px + (16 + 16 * 0.7) * ((100vw - 320px) / 1200 ));
+    }
+    h5{
+        font-size: calc( 15px + (16 + 16 * 0.7) * (100vw - 320px) / 1200)
+    }
+    .sale__row{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .sale__column{
+        flex: 0 0 100%;
+        margin: 0px 0px 40px 0px;
+    }
+    .item-about__text{
+        text-align: center;
+        text-decoration-style: wavy;
+    }
+}

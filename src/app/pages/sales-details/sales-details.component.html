@@ -1,0 +1,33 @@
+<p class="back-sales" (click)="backToSales()">Повернутись назад</p>
+
+<div class="sale">
+    <div class="sale__body">
+        <div class="sale__title title">
+            {{ sale?.name  }}
+        </div>
+        <div class="sale__row">
+            <div class="sale__column">
+                <div class="item-about">
+                    <div class="item-about__image">
+                        <img src="{{ sale?.image }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="sale__column">
+                <div class="item-about">
+                    <div class="item-about__text">
+                        <h5>
+                            {{ sale?.description }}
+                        </h5>
+                        <ul>
+                            <li>{{ sale?.moreDescription1 }}</li>
+                            <li>{{ sale?.moreDescription2 }}</li>
+                            <li>{{ sale?.moreDescription3 }}</li>
+                            <li>{{ sale?.moreDescription4 }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,187 @@
+<div class="back-home" (click)="backToCatalog()">
+  Повернутись назад
+</div>
+<div class="main">
+  <div class="main__about">
+    <div class="main__about__image">
+      <div class="image-auto">
+        <img src="{{ auto?.image }}" alt="" style="width: 100%; height: 100%;">
+      </div>
+    </div>
+    <div class="main__about__price">
+      <div class="main__about__price__details">
+        <h2 class="car-name">{{ auto?.nameUA }}</h2>
+        <h4 class="price-day"> від {{auto?.price15AndMore}} Є за добу</h4>
+        <h4> Завдаток: {{ auto?.deposit }} Є</h4>
+        <h4> 1-7 днів: {{ auto?.price1_7 }} Є за добу</h4>
+        <h4> 8-14 днів: {{ auto?.price8_14 }} Є за добу</h4>
+        <h4> від 15 днів: {{auto?.price15AndMore }} Є за добу</h4>
+        <div class="reserve">
+          <button class="button-reserve">
+            Замовити
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main__additional-box">
+    <div class="main__additional-box__information">
+      <h3 class="additional-box__title"> Додаткова інформація</h3>
+      <h5 class="seats">Кількість місць:</h5>
+      <p> {{ auto?.seats}} </p>
+      <h5 class="category">Клас:</h5>
+      <p> {{ auto?.category.nameUA }} </p>
+      <h5 class="transmission"> Коробка передач:</h5>
+      <p> {{ auto?.transmission }} </p>
+      <h5 class="engine">Об'єм двигуна:</h5>
+      <p> {{auto?.engine }} </p>
+      <h5 class="body-type">Тип кузова:</h5>
+      <p> {{ auto?.bodyType }} </p>
+    </div>
+  </div>
+
+  <div class="registration">
+    <form #bookingForm>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="dateStart">Початок оренди</label>
+          <input type="date" [(ngModel)]="dateStart" name="dateStart" class="form-control" id="dateStart"
+            #datestart="ngModel" [value]="dateStart" (change)="onDateChanged(template)" min="2020-11-30"
+            max="2021-12-31" onkeypress="return false" required> 
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="userTimeStart">Година</label>
+          <input type="time" [(ngModel)]="userTimeStart" name="userTimeStart" class="form-control" id="userTimeStart"
+            value="17:30" #timestart="ngModel" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="dateEnd">Кінець оренди</label>
+          <input type="date" [(ngModel)]="dateEnd" name="dateEnd" class="form-control" id="dateEnd" #dateend="ngModel"
+           (change)="onDateChanged(template)" min="2020-11-30" max="2021-12-31" onkeypress="return false" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="userTimeEnd">Година</label>
+          <input type="time" class="form-control" id="userTimeEnd" [(ngModel)]="userTimeEnd" name="userTimeEnd"
+            #timeend="ngModel" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="userStreetStart">Місце видачі</label>
+          <select [(ngModel)]="userStreetStart" name="userStreetStart" #streetstart="ngModel" class="form-control"
+            id="userStreetStart" required>
+            <option value="Аеропорт (вул. Любінська, 168)">Аеропорт (вул. Любінська, 168)</option>
+            <option value="Головний залізничний вокзал (площа Двірцева 1)">Головний залізничний вокзал (площа Двірцева
+              1)</option>
+            <option value="ТРЦ Форум Львів (вул. Під Дубом 7Б)">ТРЦ Форум Львів (вул. Під Дубом 7Б)</option>
+            <option value="ТРЦ Кінг-Крос Леополіс ( с. Сокільники, вул. Стрийська 30)">ТРЦ Кінг-Крос Леополіс ( с.
+              Сокільники, вул. Стрийська 30)</option>
+            <option value="ТРЦ Вікторія Гарденс (вул. Кульпарківська 226а)">ТРЦ Вікторія Гарденс (вул. Кульпарківська
+              226а)</option>
+            <option value="Головний офіс (вул. Залізнична 17)" selected>Головний офіс (вул. Залізнична 17)</option>
+          </select>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="userStreetEnd">Місце прийому</label>
+          <select [(ngModel)]="userStreetEnd" name="userStreetEnd" #streetend="ngModel" class="form-control"
+            id="userStreetEnd" required>
+            <option value="Аеропорт (вул. Любінська, 168)" selected>Аеропорт (вул. Любінська, 168)</option>
+            <option value="Головний залізничний вокзал (площа Двірцева 1)">Головний залізничний вокзал (площа Двірцева
+              1)</option>
+            <option value="ТРЦ Форум Львів (вул. Під Дубом 7Б)">ТРЦ Форум Львів (вул. Під Дубом 7Б)</option>
+            <option value="ТРЦ Кінг-Крос Леополіс ( с. Сокільники, вул. Стрийська 30)">ТРЦ Кінг-Крос Леополіс ( с.
+              Сокільники, вул. Стрийська 30)</option>
+            <option value="ТРЦ Вікторія Гарденс (вул. Кульпарківська 226а)">ТРЦ Вікторія Гарденс (вул. Кульпарківська
+              226а)</option>
+            <option value="Головний офіс (вул. Залізнична 17)">Головний офіс (вул. Залізнична 17)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="userName">Прізвище, ім'я</label>
+          <input #usName #firstName="ngModel" [(ngModel)]="userName" name="userName" min="5" type="text"
+            class="form-control" id="userName" [pattern]="clientName" placeholder="введіть Ваше Ім'я та Прізвище" required>
+          <!-- <p class="dan" [hidden]="firstName.valid || firstName.pristine">
+            Поле повинне бути заповненим
+          </p> -->
+          <div *ngIf="firstName.invalid && firstName.touched" >Введіть коректне ім'я</div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="userPhone">Номер телефону</label>
+          <input #phone="ngModel" [(ngModel)]="userPhone" name="userPhone" type="text" class="form-control"
+            id="userPhone" [pattern]="clientPhone" placeholder="введіть Ваш телефон" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="userEmail">email</label>
+          <input #email="ngModel" [(ngModel)]="userEmail" name="userEmail" min="5" type="text" class="form-control"
+            id="userEmail" [pattern]="clientEmail" placeholder="введіть email" required>
+          <div *ngIf="email.invalid && email.touched"> Введіть коректно Ваш email</div>
+        </div>
+      </div>
+      <!-- <h4 class="additional-title">Додаткові послуги</h4>
+      <div class="form-group row ml-1">
+        <div class="form-check col-md-3">
+          <input class="form-check-input" [(ngModel)]="insurance" name="insurance" value="70" type="checkbox" id="fullInsurance" required>
+          <label class="form-check-label" for="fullInsurance">
+            <h6>Повне страхування 70Є</h6>
+          </label>
+        </div>
+        <div class="form-check col-md-3 mb-3">
+          <input class="form-check-input" type="checkbox" value="" id="kidChair" required>
+          <label class="form-check-label" for="kidChair">
+            <h6>Дитяче крісло 10Є</h6>
+          </label>
+        </div>
+        <div class="form-check col-md-3 mb-3">
+          <input class="form-check-input" type="checkbox" value="" id="bicycle" required>
+          <label class="form-check-label" for="bicycle">
+            <h6>Велобагажник 20Є</h6>
+          </label>
+        </div>
+        <div class="form-check col-md-3 mb-3">
+          <input class="form-check-input" type="checkbox" value="" id="driver" required>
+          <label class="form-check-label" for="driver">
+            <h6>Додатковий водій 10Є</h6>
+          </label>
+        </div>
+      </div> -->
+      <div class="box-suma">
+        <div class="suma">
+          <h3>Загальна вартість: {{ totalPay() }} Є</h3>
+        </div>
+        <button (click)="addToOrder();bookingForm.reset();openModalOrder(showOrder);"
+          [disabled]="datestart.invalid || timestart.invalid || dateend.invalid || timeend.invalid || streetstart.invalid || streetend.invalid || firstName.invalid || phone.invalid || email.invalid"
+          class="btn btn-dark" style="color:orange" type="button">Оформити</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Вибачте!</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    Це авто уже забрьоновано на цю дату. Спробуйтe іншу дату!
+  </div>
+</ng-template>
+
+<ng-template #showOrder>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Вітаємо!</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRefOrder.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h6>Ваше замовлення прийнято! Вартість замовлення складає: <span class="total-payment">{{ totalPayment }}</span>  Євро.</h6>  
+    <h6>Ми зв'яжемось із Вами протягом п'яти хвилин.</h6>
+  </div>
+</ng-template>

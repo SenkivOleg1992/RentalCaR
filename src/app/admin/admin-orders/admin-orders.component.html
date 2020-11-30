@@ -1,0 +1,31 @@
+<div class="orders">
+    <div class="order-empty" *ngIf="getOrders.length == 0">
+        <p>Список замовлень порожній</p>
+    </div>
+    <div class="orders__body" *ngIf="getOrders.length !== 0">
+        <div class="orders__row">
+            <div class="orders__column" *ngFor="let o of getOrders">
+                <div class="info-order">
+                    <div class="info-order__image">
+                        <img src="{{ o?.image}}" alt="">
+                    </div>
+                    <div class="info-order__text">
+                        <h3>Імя та Прізвище: <span class="info-about"> {{ o.userName }} </span> </h3>
+                        <h3>Телефон: <span class="info-about"> {{ o.userPhone }} </span></h3>
+                        <h3>Емеіл: <span class="info-about"> {{ o.userEmail }}  </span></h3>
+                        <h3>Початок оренди: <span class="info-about">{{ o.userTimeStart }} </span> </h3>
+                        <h3>Кінець оренди: <span class="info-about"> {{ o.userTimeEnd }} </span> </h3>
+                        <h3>Початок оренди: <span class="info-about"> {{ o.userDateStart }} </span> </h3>
+                        <h3>Кінець оренди: <span class="info-about">{{ o.userDateEnd }}  </span></h3>
+                        <h3>Подача авто: <span class="info-about"> {{ o.userStreetStart }}  </span> </h3>
+                        <h3>Забір авто: <span class="info-about"> {{ o.userStreetEnd }} </span> </h3>
+                        <h3>Додаткові побажання: <span class="info-about"> {{ o.userComment }} </span> </h3>
+                        <h3>Кількість днів: <span class="info-about"> {{ o.totalDays }} </span></h3>
+                        <h3>Загальна вартість оренди: <span class="info-about">{{ o.totalPayment }} Є </span> </h3>
+                        <button (click)="deleteOrder(o)" class="delete-order">Видалити замовлення</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

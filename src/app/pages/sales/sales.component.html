@@ -1,0 +1,26 @@
+<div class="sale">
+    <div class="sale__body">
+        <div class="sale__title title">
+            Акції
+        </div>
+        <div class="sale__row">
+            <div class="sale__column" *ngFor="let s of sales">
+                <div class="item-about">
+                    <div class="item-about__image">
+                        <img src="{{ s?.image }}" alt="" [routerLink]="['/sale', s.id]">
+                    </div>
+                    <div class="item-about__text">
+                        <h5>
+                            {{ s?.name }}
+                        </h5>
+                        <div class="more-description">
+                            <p>
+                                {{ s?.description }}
+                            </p>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

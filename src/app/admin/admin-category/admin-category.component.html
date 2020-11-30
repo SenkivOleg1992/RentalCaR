@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <form>
+        <div class="form-group">
+            <label for="nameUA">Назва UA</label>
+            <input type="text" #en="ngModel"  [(ngModel)]="nameUA" name="nameUA" id="nameUA" class="form-control" placeholder="уведіть назву категорії" required>
+        </div>
+        <div class="form-group">
+            <label for="nameEN">Назва EN</label>
+            <input type="text" #ua="ngModel"  [(ngModel)]="nameEN" name="nameEN" id="nameEN" class="form-control" placeholder="уведіть назву категорії" required>
+        </div>
+        
+        <button  type="button" (click)="addCategory()" [disabled]="ua.invalid || en.invalid" class="btn btn-success">Додати</button>
+    </form>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover mt-3">
+        <thead>
+            <th>#</th>
+            <th>Назва UA</th>
+            <th>Назва EN</th>
+            <th>Редагувати</th>
+            <th>Видалити</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of adminCategory; let i=index">
+                <td> {{i+1}} </td>
+                <td> {{c.nameUA}}</td>
+                <td> {{c.nameEN}}</td>
+                <td>
+                    <button (click)="editCategory(c)" class="btn btn-warning">Редагувати</button>
+                </td>
+                <td>
+                    <button (click)="deleteCategory(c)" class="btn btn-danger">Видалити</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+}
+.catalog{
+    font-family: 'Montserrat', sans-serif;
+    color: #363635;
+}
+.catalog__body{
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.catalog__title{
+    text-align: center;
+    margin: 30px 0px 60px 0px;
+}
+.title{
+    font-size: calc(15px + 16 * (100vw / 1200));
+    position: relative;
+    padding: 0px 0px 20px 0px;
+}
+.title:after{
+    content: '';
+    width: 13.5%;
+    height: 3px;
+    position: absolute;
+    left: 45%;
+    bottom: 0;
+    margin: 0px 0px 0px -25px;
+    background-color: orange;
+}
+
+.catalog__row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.catalog__column{
+    flex: 0 0 30%;
+    margin-bottom: 40px;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    box-shadow: 9px 0px 9px 0px rgba(128, 126, 131, 0.76);
+}
+
+.item-about__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.item-about__image img:hover{
+    transform: rotate(-360deg);
+    transform: scaleX(1.1);
+    transition-duration: .9s;
+}
+.item-about__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.item-about__car-name{
+    font-size:calc(13px + 15 * ( 100vw / 1200 ));
+}
+.item-about__price{
+    font-size:calc( 10px + 10 * ( 100vw / 1200));
+    font-weight: 500;
+    color: orange;
+
+}
+.evro-img{
+    width: 30px;
+    height: 30px;
+}
+
+.transmission-text{
+    display: inline-block;
+    margin-right: 10px;
+}
+.transmission-icon{
+    width: 40px;
+    height: 40px;
+    color: orange;
+}
+.transmission-icon:hover{
+    transform: scale(1.2);
+}
+
+.order{
+    // width: 30%;
+    padding: 10px;
+    margin: 10px 0px;
+    border: 2px solid orange;
+    border-radius: 4px;
+    background-color: orange;
+    color: white;
+}
+.order:hover{
+    transition-timing-function: linear;
+    transition-duration: .5s;
+    border: 2px solid orange;
+    color: orange;
+    background-color: white;
+}
+
+@media ( max-width: 767px ) {
+    .catalog__column{
+        flex: 0 0 90%;
+    }
+
+    .title:after{
+        content: '';
+        width: 16%;
+        height: 3px;
+        position: absolute;
+        left: 47%;
+        bottom: 0;
+        margin: 0px 0px 0px -25px;
+        background-color: orange;
+    }
+}
+
+@media (max-width: 520px) {
+    .title:after {
+        content: '';
+        width: 20%;
+    }
+}

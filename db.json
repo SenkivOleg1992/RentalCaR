@@ -1,0 +1,369 @@
+{
+  "sales": [
+    {
+      "id": 1,
+      "name": "Раннє бронювання",
+      "description": "Бронюйте завчасно зі знижкою!",
+      "moreDescription1": "Розмір знижки згідно з умовами раннього бронювання:",
+      "moreDescription2": "12 % у разі бронювання за 3 місяці (від 91 до 179 днів);",
+      "moreDescription3": "8 % у разі замовлення авто за 2 місяці (від 61 до 90 днів);",
+      "moreDescription4": "5 %, якщо бронювати за 30–60 днів до дати початку оренди.",
+      "image": "https://rental.ua/content/documents/7/614/thumb-article-700x333-d4ea.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Безкоштовні дні оренди!",
+      "description": "Отримуй безкоштовні дні оренди!",
+      "moreDescription1": "При оренді на 7 діб - 1 день в подарунок.",
+      "moreDescription2": "На 14 діб - 2 дні.",
+      "moreDescription3": "Від 30-ти діб - 3дні.",
+      "moreDescription4": "Дана пропозиція не підсумовується з іншими знижками та акціями. *** Діє до 31.10.2020 року",
+      "image": "https://rental.ua/content/documents/9/841/thumb-article-700x333-c5e8.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "id": 2,
+      "nameUA": "бюджетні",
+      "nameEN": "budgetary"
+    },
+    {
+      "id": 4,
+      "nameUA": "кросовери",
+      "nameEN": "crossovers "
+    },
+    {
+      "id": 5,
+      "nameUA": "комфорт",
+      "nameEN": "comfort"
+    },
+    {
+      "id": 6,
+      "nameUA": "преміум",
+      "nameEN": "premium"
+    },
+    {
+      "id": 7,
+      "nameUA": "22",
+      "nameEN": "33"
+    },
+    {
+      "id": 8,
+      "nameUA": "112",
+      "nameEN": "22"
+    },
+    {
+      "id": 9,
+      "nameUA": "123",
+      "nameEN": "123"
+    }
+  ],
+  "auto": [
+    {
+      "id": 3,
+      "category": {
+        "id": 2,
+        "nameUA": "бюджетні",
+        "nameEN": "budgetary"
+      },
+      "nameUA": "Форд Фієста",
+      "nameEN": "Ford Fiesta",
+      "deposit": 400,
+      "price1_7": 30,
+      "price8_14": 25,
+      "price15AndMore": 20,
+      "transmission": "Автомат",
+      "engine": "1.2",
+      "seats": 5,
+      "fuel": "Бензин",
+      "bodyType": "Хетчбек",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F34291ea1-6383-40ee-bbb8-18835174d617.jpeg?alt=media&token=5ce60e5f-e925-441a-a051-b1f5474f2450"
+    },
+    {
+      "id": 13,
+      "category": {
+        "id": 4,
+        "nameUA": "кросовери",
+        "nameEN": "crossovers "
+      },
+      "nameUA": "Сеат Атека",
+      "nameEN": "Seat Ateca",
+      "price1_7": 45,
+      "price8_14": 40,
+      "price15AndMore": 33,
+      "transmission": "Автомат",
+      "engine": "1.6",
+      "seats": 5,
+      "fuel": "Дизель",
+      "bodyType": " Кросовер",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F2e6eb921-7462-415c-848f-f90bd4bba855.jpeg?alt=media&token=9fa0b6fb-62f7-46d5-87b1-972f5c142ae6"
+    },
+    {
+      "id": 14,
+      "category": {
+        "id": 2,
+        "nameUA": "бюджетні",
+        "nameEN": "budgetary"
+      },
+      "nameUA": "Шкода Фабіа",
+      "nameEN": "Skoda Fabia",
+      "deposit": 400,
+      "price1_7": 34,
+      "price8_14": 30,
+      "price15AndMore": 22,
+      "transmission": "Автомат",
+      "engine": "1.4",
+      "seats": 5,
+      "fuel": "Дизель",
+      "bodyType": " Хетчбек",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2Ff201f0d5-5cb7-447f-a4da-d0fe11aa48fa.jpeg?alt=media&token=d0e009cf-bacb-4c1d-bd5d-3596eefdecb0"
+    },
+    {
+      "id": 15,
+      "category": {
+        "id": 5,
+        "nameUA": "комфорт",
+        "nameEN": "comfort"
+      },
+      "nameUA": "Шкода Октавіа",
+      "nameEN": "Skoda Octavia",
+      "description": "",
+      "deposit": 400,
+      "price1_7": 40,
+      "price8_14": 36,
+      "price15AndMore": 31,
+      "transmission": "Автомат",
+      "engine": "1.8",
+      "seats": 5,
+      "fuel": "Дизель",
+      "bodyType": "універсал",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F2a288e01-fb03-421d-b088-0fb7d6c85231.jpeg?alt=media&token=c8795dda-bd0c-40f9-9ebe-92ce53d83507"
+    },
+    {
+      "id": 16,
+      "category": {
+        "id": 5,
+        "nameUA": "комфорт",
+        "nameEN": "comfort"
+      },
+      "nameUA": "Фольксфаген Джетта",
+      "nameEN": "Volkswagen Jetta",
+      "description": "",
+      "deposit": 400,
+      "price1_7": 42,
+      "price8_14": 36,
+      "price15AndMore": 30,
+      "transmission": "Автомат",
+      "engine": "1.9",
+      "seats": 5,
+      "fuel": "Бензин",
+      "bodyType": "седан",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2Fde5e3554-d118-45d5-8d39-f5377779e6d2.jpeg?alt=media&token=b5a85e54-25bd-4510-a206-b7f574774590"
+    },
+    {
+      "id": 17,
+      "category": {
+        "id": 4,
+        "nameUA": "кросовери",
+        "nameEN": "crossovers "
+      },
+      "nameUA": "Пежо 2008",
+      "nameEN": "Pegeout 2008",
+      "description": "",
+      "deposit": 600,
+      "price1_7": 45,
+      "price8_14": 40,
+      "price15AndMore": 34,
+      "transmission": "Автомат",
+      "engine": "1.6",
+      "seats": 5,
+      "fuel": "Дизель",
+      "bodyType": " Кросовер",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F44b95ebe-6cd0-4d59-85d2-1c8d85ee7c0b.jpeg?alt=media&token=ce2271ce-bcea-4716-847e-a08fa5560a0c"
+    },
+    {
+      "id": 18,
+      "category": {
+        "id": 5,
+        "nameUA": "комфорт",
+        "nameEN": "comfort"
+      },
+      "nameUA": "Мазда 6",
+      "nameEN": "Mazda 6",
+      "description": "",
+      "deposit": 500,
+      "price1_7": 40,
+      "price8_14": 36,
+      "price15AndMore": 30,
+      "transmission": "Автомат",
+      "engine": "1.8",
+      "seats": 5,
+      "fuel": "Дизель",
+      "bodyType": "седан",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2Fbb5c06f0-ab61-4085-8e63-4f0e3f387747.jpeg?alt=media&token=5f5f0c73-3f76-4186-974d-d687dd08f7f2"
+    },
+    {
+      "id": 19,
+      "category": {
+        "id": 4,
+        "nameUA": "кросовери",
+        "nameEN": "crossovers "
+      },
+      "nameUA": "Джип Вранглер",
+      "nameEN": "Jeep Wrangler",
+      "deposit": 700,
+      "price1_7": 90,
+      "price8_14": 80,
+      "price15AndMore": 70,
+      "transmission": "Автомат",
+      "engine": "3.6",
+      "seats": 5,
+      "fuel": "бензин",
+      "bodyType": " Кросовер",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2Fd55d8284-44b9-49fe-95d1-f54125766921.jpeg?alt=media&token=2519444b-34ca-4657-949c-e78210b9d107"
+    },
+    {
+      "id": 20,
+      "category": {
+        "id": 4,
+        "nameUA": "кросовери",
+        "nameEN": "crossovers "
+      },
+      "nameUA": "БМВ Х1",
+      "nameEN": "BMW X1",
+      "deposit": 700,
+      "price1_7": 80,
+      "price8_14": 75,
+      "price15AndMore": 60,
+      "transmission": "Автомат",
+      "engine": "2.0",
+      "seats": 5,
+      "fuel": "Дизель",
+      "bodyType": " Кросовер",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F5ad5690a-c738-42f3-a632-180b006ff21e.jpeg?alt=media&token=61a0c50b-71ff-4541-ade0-3b612890d237"
+    },
+    {
+      "id": 21,
+      "category": {
+        "id": 5,
+        "nameUA": "комфорт",
+        "nameEN": "comfort"
+      },
+      "nameUA": "Альфа Ромео 159",
+      "nameEN": "Alpha Romeo 159",
+      "description": "",
+      "deposit": 600,
+      "price1_7": 40,
+      "price8_14": 36,
+      "price15AndMore": 32,
+      "transmission": "Автомат",
+      "engine": "2.2",
+      "seats": 5,
+      "fuel": "Бензин",
+      "bodyType": "седан",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F306fb7a6-29c9-4925-b896-ebc81d63f726.jpeg?alt=media&token=9dd3a62b-1e82-4978-8ce7-611fbe225cd5"
+    },
+    {
+      "id": 22,
+      "category": {
+        "id": 5,
+        "nameUA": "комфорт",
+        "nameEN": "comfort"
+      },
+      "nameUA": "Сеат Леон",
+      "nameEN": "Seat Leon",
+      "description": "",
+      "deposit": 400,
+      "price1_7": 36,
+      "price8_14": 30,
+      "price15AndMore": 25,
+      "transmission": "Автомат",
+      "engine": "2.0",
+      "seats": 5,
+      "fuel": "Дизель",
+      "bodyType": "універсал",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F5f8fe573-cbbe-4dc1-b96e-18d57f378bf1.jpeg?alt=media&token=bdcf9a7c-1634-4be2-bbc9-ec1468cb8216"
+    },
+    {
+      "id": 23,
+      "category": {
+        "id": 2,
+        "nameUA": "бюджетні",
+        "nameEN": "budgetary"
+      },
+      "nameUA": "Фольсваген Поло",
+      "nameEN": "Volswagen Polo",
+      "deposit": 400,
+      "price1_7": 35,
+      "price8_14": 30,
+      "price15AndMore": 22,
+      "transmission": "Механіка",
+      "engine": "1.2",
+      "seats": 5,
+      "fuel": "Бензин",
+      "bodyType": " Хетчбек",
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F271df9de-4b95-43c4-9f73-ec88cd389da7.jpeg?alt=media&token=df69f008-f09a-4ab7-8b81-1a608e8c905a"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userName": "AFDGDFSF",
+      "userPhone": "AFGDFGAS",
+      "userEmail": "ol@gmail.com",
+      "userTimeStart": "20:00",
+      "userTimeEnd": "21:00",
+      "userDateStart": "2020-08-11T00:00:00.000Z",
+      "userDateEnd": "2020-08-19T00:00:00.000Z",
+      "userStreetStart": "ТРЦ Кінг-Крос Леополіс ( с. Сокільники, вул. Стрийська 30)",
+      "userStreetEnd": "Головний офіс (вул. Залізнична 17)",
+      "totalPayment": 320,
+      "totalDays": 8,
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F2e6eb921-7462-415c-848f-f90bd4bba855.jpeg?alt=media&token=9fa0b6fb-62f7-46d5-87b1-972f5c142ae6"
+    },
+    {
+      "id": 2,
+      "userDateStart": null,
+      "userDateEnd": null,
+      "totalDays": null,
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F34291ea1-6383-40ee-bbb8-18835174d617.jpeg?alt=media&token=5ce60e5f-e925-441a-a051-b1f5474f2450"
+    },
+    {
+      "id": 3,
+      "userName": "Христусик",
+      "userPhone": "0975476267",
+      "userEmail": "gvozdetska_k@ukr.net",
+      "userTimeStart": "11:00",
+      "userTimeEnd": "11:00",
+      "userDateStart": "2020-08-12T00:00:00.000Z",
+      "userDateEnd": "2020-08-13T00:00:00.000Z",
+      "userStreetStart": "Головний офіс (вул. Залізнична 17)",
+      "userStreetEnd": "Головний офіс (вул. Залізнична 17)",
+      "totalPayment": 30,
+      "totalDays": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F34291ea1-6383-40ee-bbb8-18835174d617.jpeg?alt=media&token=5ce60e5f-e925-441a-a051-b1f5474f2450"
+    },
+    {
+      "id": 4,
+      "userName": "Христусик",
+      "userPhone": "0976299719",
+      "userEmail": "gvozdetska_k@ukr.net",
+      "userTimeStart": "11:11",
+      "userTimeEnd": "11:00",
+      "userDateStart": "2020-08-12T00:00:00.000Z",
+      "userDateEnd": "2020-08-27T00:00:00.000Z",
+      "userStreetStart": "Головний офіс (вул. Залізнична 17)",
+      "userStreetEnd": "Головний офіс (вул. Залізнична 17)",
+      "totalPayment": 495,
+      "totalDays": 15,
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F2e6eb921-7462-415c-848f-f90bd4bba855.jpeg?alt=media&token=9fa0b6fb-62f7-46d5-87b1-972f5c142ae6"
+    },
+    {
+      "id": 5,
+      "userDateStart": null,
+      "userDateEnd": null,
+      "totalDays": null,
+      "image": "https://firebasestorage.googleapis.com/v0/b/auto-for-you.appspot.com/o/images%2F262dcb64-60a9-4562-9f0d-fe16d811d866.jpeg?alt=media&token=8c650b42-dcfa-485d-8671-52aefc3b92dc"
+    }
+  ]
+}

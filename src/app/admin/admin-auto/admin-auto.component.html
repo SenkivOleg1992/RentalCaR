@@ -1,0 +1,128 @@
+<div class="container-fluid">
+  <form>
+    <div class="form-group">
+      <label for="autoCategory">Choose category</label>
+      <select #category="ngModel" [(ngModel)]="autoCategory" name="autoCategory"  class="form-control" id="autoCategory" placeholder="введіть категорію" required>
+        <option *ngFor="let c of adminCategory" [ngValue]="c" [selected]="c">{{ c.nameUA  }}</option>
+      </select> 
+    </div>
+    <div class="form-group">
+      <label for="autoNameUA">Auto name UA</label>
+      <input type="text" #nameua="ngModel" [(ngModel)]="autoNameUA" name="autoNameUA" id="autoNameUA" class="form-control"
+        placeholder="уведіть назву категорії" required>
+    </div>
+    <div class="form-group">
+      <label for="autoNameEN">Auto name EN</label>
+      <input type="text" #nameen="ngModel" [(ngModel)]="autoNameEN" name="autoNameEN" id="autoNameEN" class="form-control"
+        placeholder="уведіть назву категорії" required>
+    </div>
+    <div class="form-group">
+      <label for="autoDeposit">Auto deposit </label>
+      <input type="number" #deposit="ngModel" [(ngModel)]="autoDeposit" name="autoDeposit" id="autoDeposit" class="form-control"
+        placeholder="уведіть суму депозиту" required>
+    </div>
+    <div class="form-group">
+      <label for="autoPrice1_7">Auto for 1-7 day </label>
+      <input type="number" #price1_7="ngModel" [(ngModel)]="autoPrice1_7" name="autoPrice1_7" id="autoPrice1_7" class="form-control"
+        placeholder="введіть ціну за 1-7 дня"required>
+    </div>
+    <div class="form-group">
+      <label for="autoPrice8_14">Auto for 8-14 day </label>
+      <input type="number" #price8_14="ngModel" [(ngModel)]="autoPrice8_14" name="autoPrice8_14" id="autoPrice8_14" class="form-control"
+        placeholder="уведіть ціну за 8-14 днів" required>
+    </div>
+    <div class="form-group">
+      <label for="autoPrice15AndMore">Auto for 15 and more days </label>
+      <input type="number" #price15="ngModel" [(ngModel)]="autoPrice15AndMore" name="autoPrice15AndMore" id="autoPrice15AndMore"
+        class="form-control" placeholder="уведіть ціну за 15днів і більше" required>
+    </div>
+    <div class="form-group">
+      <label for="autoTransmission">Auto transmission</label>
+      <select #transmission="ngModel" [(ngModel)]="autoTransmission" name="autoTransmission" id="autoTransmission" class="form-control" placeholder="уведіть тип коробки передач" required>
+        <option value="Автомат" [selected]>Автомат</option>
+        <option value="Ручна">Ручна</option>
+        <option value="Робот">Робот</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="autoEngine">Auto engine</label>
+      <input type="text" #engine="ngModel" [(ngModel)]="autoEngine" name="autoEngine" id="autoEngine" class="form-control"
+        placeholder="уведіть тип мотору" required>
+    </div>
+    <div class="form-group">
+      <label for="autoSeats">Auto seats</label>
+      <input type="number" #seats="ngModel" [(ngModel)]="autoSeats" name="autoSeats" id="autoSeats" class="form-control"
+        placeholder="уведіть кількість місць" required>
+    </div>
+    <div class="form-group">
+      <label for="autoFuel">Auto fuel</label>
+      <select #fuel="ngModel" [(ngModel)]="autoFuel" name="autoFuel" id="autoFuel" class="form-control"
+       required >
+        <option value="Дизель" [selected]>Дизель</option>
+        <option value="Бензин">Бензин</option>
+        <option value="Гібрид">Гібрид</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="autoBodyType">Auto body type</label>
+      <input type="text" #bodytype="ngModel" [(ngModel)]="autoBodyType" name="autoBodyType" id="autoBodyType" class="form-control"
+        placeholder="уведіть тип кузова" required>
+    </div>
+    <div class="custom-file">
+      <input (change)="uploadFile($event)" #picture  type="file" class="custom-file-input" id="customFile" required>
+      <label class="custom-file-label" for="customFile">Choose file</label>
+    </div>
+    <div class="progress mt-3 mb-3">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+        [style.width]="(uploadProgress | async) + '%'" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <button type="button" (click)="addAuto()" class="btn btn-success" [disabled]="category.invalid ||nameua.invalid || nameen.invalid || deposit.invalid || price1_7.invalid || price8_14.invalid || price15.invalid || transmission.invalid || engine.invalid || seats.invalid || fuel.invalid || bodytype.invalid || picture.invalid ">Додати</button>
+  </form>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-hover mt-3">
+    <thead>
+      <th>#</th>
+      <th>Назва UA</th>
+      <th>Назва EN</th>
+      <th>категорія</th>
+      <th>Депозит</th>
+      <th>Ціна 1-7 днів</th>
+      <th>8-14</th>
+      <th>> 15</th>
+      <th>Коробка передач</th>
+      <th>Двигун</th>
+      <th>К-сть місць</th>
+      <th>Паливо</th>
+      <th>Кузов</th>
+      <th>Редагувати</th>
+      <th>Видалити</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of adminAuto; let i = index;">
+          <td>{{ i + 1 }} </td>
+          <td>{{ a.nameUA }}</td>
+          <td>{{ a.nameEN }}</td>
+          <td>{{ a.category.nameUA }}</td>
+          <td>{{ a.deposit }}</td>
+          <td>{{ a.price1_7 }}€</td>
+          <td>{{ a.price8_14 }}€</td>
+          <td>{{ a.price15AndMore }}€</td>
+          <td>{{ a.transmission }}</td>
+          <td>{{ a.engine }}</td>
+          <td>{{ a.seats }}</td>
+          <td>{{ a.fuel }}</td>
+          <td>{{ a.bodyType }}</td>
+          <td>
+              <button (click)="editAuto(a)" class="btn btn-light">Редагувати</button>
+          </td>
+          <td>
+              <button (click)="deleteAuto(a)" class="btn btn-dark">Видалити</button>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+

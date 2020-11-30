@@ -1,0 +1,31 @@
+
+<div class="header-admin">
+  <div class="header-admin__body">
+    <div class="header-admin__row">
+      <div class="header-admin__title title">
+        <a class="nav-link" [routerLink]="[ 'category' ]" routerLinkActive="active">Категорії</a>
+      </div>
+      <div class="header-admin__title title">
+        <a class="nav-link" [routerLink]="[ 'auto']" routerLinkActive="active">Авто</a>
+      </div>
+      <div class="header-admin__title title">
+        <a class="nav-link" [routerLink]="[ 'sales' ]" routerLinkActive="active">Акції</a>
+      </div>
+      <div class="header-admin__title title">
+        <a class="nav-link" [routerLink]="[ 'orders' ]" routerLinkActive="active">Замовлення</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about">
+    <router-outlet></router-outlet>
+</div>
+<div class="log-out">
+  <button class="btn btn-dark" (click)="logOut()">Вийти</button>
+</div>
+
+
+
+
+

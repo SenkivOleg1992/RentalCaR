@@ -1,0 +1,123 @@
+.orders__body{
+    width: 85%;
+    margin: 30px auto;
+    border: 1px solid gold;
+    border-radius: 10px;
+}
+.orders__row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.orders__column{
+    width: 90%;
+    // flex: 1 1 90%;
+    min-height: 40vh;
+    margin: 30px 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.info-order{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.info-order__image{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-order__image img{
+    width: 85%;
+    box-shadow: 9px 9px 9px 0px rgba(128, 126, 131, 0.76);
+    border-radius: 7px;
+}
+
+.info-order__text{
+    width: 60%;
+    color: rgb(105, 104, 104);
+}
+.info-order__text h3{
+    width: 60%;
+    color: rgb(105, 104, 104);
+    font-size: calc( 10px + 7 * (100vw / 1200))
+}
+.info-order__text h3 .info-about{
+    color: orange;
+}
+.order-empty{
+    width: 100%;
+    min-height: 50vh;
+    margin: 100px auto;
+    text-align: center;
+    font-size: calc( 10px + 13 * ( 100vw / 1200));
+    color: rgb(134, 128, 128);
+    position: relative;
+}
+.order-empty p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.delete-order{
+    color: white;
+    font-size: calc(7px + 10 * (100vw / 1200));
+    border-radius: 5px;
+    border: 2px solid goldenrod;
+    background-color: rgb(253, 165, 0);
+    margin: 10px auto;
+}
+.delete-order:hover{
+    color: orange;
+    background-color: white;
+    border: 2px solid goldenrod;
+    transition-timing-function: ease-in;
+    transition-duration: .5s;
+}
+
+@media (max-width: 767px) {
+    .info-order{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .info-order__image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-order__text{
+        width: 100%;
+        text-align: justify;
+        padding: 5px;
+    }
+    .info-order__image img{
+        width: 100%;
+    }
+    .delete-order{
+        width: 80%;
+        color: white;
+        font-size: calc(7px + 10 * (100vw / 1200));
+        border-radius: 5px;
+        border: 2px solid goldenrod;
+        background-color: rgb(253, 165, 0);
+        margin: auto;
+    }
+    .delete-order:hover{
+        color: orange;
+        background-color: white;
+        border: 2px solid goldenrod;
+        transition-timing-function: ease-in;
+        transition-duration: .5s;
+    }
+}

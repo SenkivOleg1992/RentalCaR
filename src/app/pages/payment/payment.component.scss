@@ -1,0 +1,231 @@
+.back-home{
+    margin: 15px 20px;
+    color: orange;
+    font-size: calc(10px + 10 * ( 100vw / 1200));
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #363635;
+}
+.main__about{
+    margin: 40px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main__about__image, .main__about__price{
+    width: 45%;
+}
+.price-day{
+    color: rgb(231, 172, 61)
+}
+// 
+.form-row{
+    font-size: calc( 10px + 12 * ( 100vw / 1200));
+    font-weight: bold;
+}
+
+.main__about__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-auto{
+    width: 80%;
+    height: 100%;
+}
+.main__about__price{
+    margin: auto;
+}
+
+.main__about__price__details{
+    width: 100%;
+    min-height: 80%;
+}
+.car-name{
+    font-size: calc(15px + 15 * (100vw / 1200));
+    font-weight: bolder;
+    color: orange;
+
+}
+h2{
+    color: orange;
+}
+h4{
+    margin-top: 10px;
+    text-shadow: 1px 1px 0px grey;
+}
+.additional-title{
+    color: orange;
+    margin-bottom: 15px;
+}
+.reserve{
+    margin: 30px 0;
+    width: 100%;
+    height:10%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button-reserve{
+    padding: 10px;
+    border: none;
+    border: 3px solid orange;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+}
+
+.button-reserve:hover{
+    border: 3px solid orange;
+    color: orange;
+    background-color: white;
+}
+
+.main__additional-box{
+    margin: auto;
+    width: 90%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main__additional-box__information{
+    min-width: 100%;
+    min-height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.additional-box__title{
+    width: 100%;
+    text-align: center;
+    font-size: calc( 10px + 20 * ( 100vw / 1200));
+}
+
+.seats, .transmission, .engine, .body-type, .category {
+    margin-top: 10px;;
+    width: 20%;
+}
+
+
+p{
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+    border: 1px solid gold;
+    background-color: rgb(241, 238, 238);
+    border-radius: 2px;
+    text-shadow: 2px 2px 1px white;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+.registration{
+    width: 90%;
+    margin: auto;
+    margin-top: 10vh;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 9px 7px 33px 0px rgba(0,0,0,0.6);
+}
+.registration::after{
+    content: "";
+    displaY: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("src/assets/images/fon.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -1;
+
+}
+
+label{
+    color: orange;
+}
+
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid green;
+
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid red;
+
+}
+
+.box-suma{
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.suma{
+    min-width: 20%;
+    height: 100%;
+    color: white;
+}
+.btn{
+    font-size: 20px;
+}
+@media (max-width: 1025px) {
+    .main__about__image{
+        width: 45%;
+    }
+    .image-auto{
+        width: 100%;
+    }
+    .main__about__price{
+        width: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+    .main__additional-box{
+        width:90%
+    }
+    .main__about__image{
+        width: 85%;
+    }
+    .main__about__price{
+        width: 85%;
+    }
+    .main__about__price__details{
+        text-align: justify;
+    }
+    .button-reserve{
+        margin: 0 auto;
+    }
+    .additional-box__title{
+        text-align: center;
+    }
+    .seats, .transmission, .engine, .body-type, .category {
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .main__additional-box p {
+        width: 100%;
+    }
+    
+}
+.modal-body {
+    color: rgb(66, 65, 62);
+}
+
+.total-payment {
+    color: orange;
+}

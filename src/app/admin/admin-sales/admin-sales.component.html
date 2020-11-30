@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <form>
+        <div class="form-group">
+            <label for="saleName">Назва акції</label>
+            <input type="text" #salename="ngModel" [(ngModel)]="saleName" name="saleName" id="saleName" class="form-control" placeholder="уведіть назву акції" required>
+        </div>
+        <div class="form-group">
+            <label for="saleDescription">Деталі акції</label>
+            <input type="text" #saledescription="ngModel" [(ngModel)]="saleDescription" name="saleDescription" id="saleDescription" class="form-control" placeholder="уведіть деталі акції" required>
+        </div>
+        <div class="form-group">
+            <label for="saleMoreDescription1">Детальніше1</label>
+            <input type="text" #moredescription1="ngModel" [(ngModel)]="saleMoreDescription1" name="saleMoreDescription1" id="saleMoreDescription1" class="form-control" placeholder="уведіть детальнішу інформацію про акції" required>
+        </div>
+        <div class="form-group">
+            <label for="saleMoreDescription2">Дет.2</label>
+            <input #more2="ngModel" type="text" [(ngModel)]="saleMoreDescription2" name="saleMoreDescription2" id="saleMoreDescription2" class="form-control" placeholder="уведіть детальнішу інформацію про акції">
+        </div>
+        <div class="form-group">
+            <label for="saleMoreDescription3">Дет.3</label>
+            <input  #more3="ngModel" type="text" [(ngModel)]="saleMoreDescription3" name="saleMoreDescription3" id="saleMoreDescription3" class="form-control" placeholder="уведіть детальнішу інформацію про акції">
+        </div>
+        <div class="form-group">
+            <label for="saleMoreDescription4">Дет.4</label>
+            <input #more4="ngModel" type="text" [(ngModel)]="saleMoreDescription4" name="saleMoreDescription4" id="saleMoreDescription4" class="form-control" placeholder="уведіть детальнішу інформацію про акції">
+        </div>
+        <div class="form-group">
+            <label for="saleImage">Картинка</label>
+            <input type="text" #picture="ngModel" [(ngModel)]="saleImage" name="saleImage" id="saleImage" class="form-control" placeholder="виберіть картинку" required>
+        </div>
+        <button  type="button" (click)="addSale()" class="btn btn-success" [disabled]="salename.invalid || saledescription.invalid || moredescription1.invalid || picture.invalid" >Додати</button>
+    </form>
+</div>
+<div class="table-responsive">
+    <table class="table table-hover mt-3">
+        <thead>
+            <th>#</th>
+            <th>Назва</th>
+            <th>Деталі</th>
+            <th>Дет.1</th>
+            <th>Дет.2</th>
+            <th>Дет.3</th>
+            <th>Дет.4</th>
+            <th>Редагувати</th>
+            <th>Видалити</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let a of adminSales; let i=index">
+                <td> {{i+1}} </td>
+                <td> {{a.name}}</td>
+                <td> {{a.description}}</td>
+                <td> {{a.moreDescription1}}</td>
+                <td> {{a.moreDescription2}}</td>
+                <td> {{a.moreDescription3}}</td>
+                <td> {{a.moreDescription4}}</td>
+                <td>
+                    <button (click)="editSale(a)" class="btn btn-warning">Редагувати</button>
+                </td>
+                <td>
+                    <button (click)="deleteSale(a)" class="btn btn-danger">Видалити</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,24 @@
+<div class="table-responsive">
+    <table class="table table-striped mt-5 ml-2 mr-2">
+        <thead>
+            <tr>
+                <th scope="col">Модель</th>
+                <th scope="col">1-7 днів</th>
+                <th scope="col">8-14 днів</th>
+                <th scope="col">від 15 днів</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of priceTable">
+                <th scope="row">{{ p.nameEN}} ({{p.transmission}})</th>
+                <td> {{p.price1_7}}€ </td>
+                <td> {{p.price8_14}}€ </td>
+                <td> {{p.price15AndMore}}€ </td>
+                <td> 
+                    <button class="btn btn-warning" [routerLink]="['/payment', p.id]">Забронювати</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

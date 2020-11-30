@@ -1,0 +1,50 @@
+
+.login {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.login::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('https://storage.dtkt.ua/files/NikoNews/AutoEuro26.jpg'); 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity : 0.7;
+    z-index: -1;
+}
+.login__body {
+    width: 30%;
+    border-radius: 10px;
+}
+    
+label{
+    color: orange;
+    font-size: calc( 16px + 15 * ( 100vw / 1200));
+}
+form{
+    opacity: 1.0;
+}
+    
+.login__form{
+    width: 100%;
+
+}
+@media (max-width: 984px) {
+    .login__body{
+        width: 50%;
+    }
+}
+@media (max-width: 767px) {
+    .login__body{
+        width: 80%;
+    }
+}

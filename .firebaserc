@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "auto-for-you": {
+      "hosting": {
+        "auto-for-you": [
+          "auto-for-you"
+        ]
+      }
+    }
+  }
+}

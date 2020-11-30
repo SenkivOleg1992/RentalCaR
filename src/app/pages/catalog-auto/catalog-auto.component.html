@@ -1,0 +1,31 @@
+<div class="catalog">
+  <div class="catalog__body">
+    <div class="catalog__title title">
+      Каталог авто
+    </div>
+    <div class="catalog__row">
+      <div class="catalog__column" *ngFor="let c of autoCatalog">
+        <div class="item-about" [routerLink]="['/payment', c.id]">
+          <div class="item-about__image">
+            <img src="{{ c?.image }}" alt="image-auto" style="width: 70%; height: 100%;">
+          </div>
+          <div class="item-about__text">
+              <div class="item-about__car-name">
+                {{ c?.nameEN }}
+              </div>
+              <h5>{{ c?.bodyType }}</h5>
+              <div>
+                <p class="transmission-text">{{ c?.transmission }} </p> <img class="transmission-icon" src="assets/images/automat.jpg" alt="">
+              </div>
+              <div class="item-about__price">
+                Від {{ c?.price15AndMore }} 
+                <img class="evro-img" src="assets/images/evro_burned.png" alt="evro-logo">
+                за добу
+              </div>
+              <button class="order">Замовлення </button>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>

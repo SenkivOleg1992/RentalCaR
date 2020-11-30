@@ -1,0 +1,36 @@
+<header>
+  <div class="header"  #container>
+    <div class="header__body">
+      <div class="header__logo">
+        <img src="assets/images/RR_burned.png" alt="logo">
+      </div>
+      <input type="checkbox" [checked]="accepted"  id="menu-checkbox" >
+      <nav class="header__navigation" role="navigation">
+        <label for="menu-checkbox" class="toggle-button" data-open="МЕНЮ" data-close="Х" onclick></label>
+        <ul class="main-menu" (click)="notActive()">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active"  (click)="notActive()">Головна</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/catalog-auto']" routerLinkActive="active"  (click)="notActive()">Каталог авто</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/price']" routerLinkActive="active"  (click)="notActive()">Ціни</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hide-menu" [routerLink]="['/sales']"  (click)="notActive()">Акції</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/rental-conditions']" routerLinkActive="active"  (click)="notActive()">Умови прокату</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/contacts']" routerLinkActive="active"  (click)="notActive()">Контакти</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="active"  (click)="notActive()">Кабінет</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
